@@ -1,22 +1,27 @@
 <?php get_header(); ?>
 
 <!-- main image & intro text -->
-<section id="intro">
+<section class="intro" id="intro">
     <div class="container-lg">
         <div class="row g-4 justify-content-center align-items-center">
+
             <div class="col-md-5 text-center text-md-start">
                 <h1>
-                    <div class="display-2">Black-Belt</div>
-                    <div class="display-5 text-muted">Your Coaching Skills</div>
+                    <div class="display-2">
+                        <?php echo get_theme_mod('intro_heading', 'Black-Belt test!'); ?>
+                    </div>
+                    <div class="display-5 text-muted">
+                        <?php echo get_theme_mod('intro_sub_heading', 'Your coaching skills test!'); ?>
+                    </div>
                 </h1>
-                <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                    dignissimos?</p>
-                <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+                <p class="lead my-4 text-muted"><?php echo get_theme_mod('intro_text', 'Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam'); ?></p>
+                <a href="#pricing" class="btn btn-secondary btn-lg"><?php echo get_theme_mod('btn_text', 'Buy Niw'); ?></a>
             </div>
             <div class="col-md-5 text-center d-none d-md-block">
                 <!-- tooltip -->
                 <span class="tt" data-bs-placement="bottom" title="Tooltip!">
-                    <img src="<?php bloginfo('template_url'); ?>/images/undraw_Data_trends_re_2cdy.svg" class="img-fluid" alt="ebook">
+                    <img src="<?php echo get_theme_mod('intro_image', get_bloginfo('template_url') . '/images/undraw_Data_trends_re_2cdy.svg'); ?>" class="img-fluid" alt="ebook">
+
                 </span>
             </div>
         </div>
@@ -33,49 +38,21 @@
 
         <div class="row my-5 g-0 align-items-center justify-content-center">
             <div class="col-8 col-lg-4 col-xl-3">
-                <div class="card border-0">
-                    <div class="card-body text-center py-4">
-                        <h4 class="card-title">Starter Package</h4>
-                        <p class="display-5 my-4 primary-color fw-bold">$12.99</p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis
-                            saepe dolorum.</p>
-                        <a href="#" class="btn btn-primary-outline btn-lg mt-3">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
+                <?php if (is_active_sidebar('card1')) : ?>
+                    <?php dynamic_sidebar('card1'); ?>
+                <?php endif; ?>
             </div>
 
             <div class="col-9 col-lg-4">
-                <div class="card primary-border border-2">
-                    <div class="card-header text-center primary-color">Most Popular</div>
-                    <div class="card-body text-center py-5">
-                        <h4 class="card-title">Complete Package</h4>
-                        <p class="display-4 my-4 primary-color fw-bold">$18.99</p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis
-                            saepe dolorum.</p>
-                        <a href="#" class="btn btn-primary-outline btn-lg mt-3">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
+                <?php if (is_active_sidebar('card2')) : ?>
+                    <?php dynamic_sidebar('card2'); ?>
+                <?php endif; ?>
             </div>
 
             <div class="col-8 col-lg-4 col-xl-3">
-                <div class="card border-0">
-                    <div class="card-body text-center py-4">
-                        <h4 class="card-title">Ultimate Package</h4>
-                        <p class="display-5 my-4 primary-color fw-bold">$24.99</p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis
-                            saepe dolorum.</p>
-                        <a href="#" class="btn btn-primary-outline btn-lg mt-3">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
+                <?php if (is_active_sidebar('card3')) : ?>
+                    <?php dynamic_sidebar('card3'); ?>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -273,11 +250,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8 text-center text-light">
-                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                    exercitationem voluptatibus porro, hic asperiores fuga illo voluptates obcaecati deleniti
-                    veritatis sunt saepe quasi deserunt ex ipsum. Est possimus, aspernatur, vitae eligendi rem odit
-                    quaerat, ipsum pariatur ratione maxime delectus fuga minus accusamus dolores iusto maiores
-                    accusantium cumque magnam placeat quia!</p>
+                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <button class="btn btn-primary-outline" data-bs-toggle="modal" data-bs-target="#reg-modal">
                     Register for Updates
                 </button>
@@ -295,9 +268,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, exercitationem laboriosam nihil
-                    minus voluptatibus harum aliquam consequatur pariatur inventore dignissimos illum excepturi
-                    ratione ipsum sit iusto alias eligendi fugit laborum?</p>
+                <p>Quis, exercitationem laboriosam nihil</p>
                 <label for="modal-email" class="form-label">Your email address:</label>
                 <input type="text" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
             </div>

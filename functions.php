@@ -142,30 +142,30 @@ function wpb_init_widgets($id)
 	));
 
 	register_sidebar(array(
-		'name'  => 'Box1',
-		'id'    => 'box1',
-		'before_widget' => '<div class="box">',
+		'name'  => 'card1',
+		'id'    => 'card1',
+		'before_widget' => '<div class="card border-0">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>'
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
 	));
 
 	register_sidebar(array(
-		'name'  => 'Box2',
-		'id'    => 'box2',
-		'before_widget' => '<div class="box">',
+		'name'  => 'Card2',
+		'id'    => 'card2',
+		'before_widget' => '<div class="card primary-border border-2">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>'
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
 	));
 
 	register_sidebar(array(
-		'name'  => 'Box3',
-		'id'    => 'box3',
-		'before_widget' => '<div class="box">',
+		'name'  => 'Card3',
+		'id'    => 'card3',
+		'before_widget' => '<div class="card border-0">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>'
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
 	));
 }
 
